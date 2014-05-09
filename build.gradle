@@ -1,6 +1,7 @@
 apply plugin: 'groovy'
 apply plugin: 'nexus'
 apply plugin: 'idea'
+apply plugin: 'maven'
 
 group = 'com.github.ben-manes'
 version = '0.8'
@@ -84,3 +85,6 @@ modifyPom {
 task wrapper(type: Wrapper, description: 'Generates the gradle wrapper.') {
   gradleVersion = '1.11'
 }
+
+/* install to local maven repository */
+build.dependsOn("install")
