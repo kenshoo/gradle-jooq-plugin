@@ -1,6 +1,15 @@
 apply plugin: 'java'
 apply plugin: 'jooq'
 
+/* add migration resources */
+sourceSets {
+    main {
+        resources {
+            srcDir 'migration/src/main/resources'
+        }
+    }
+}
+
 buildscript {
   repositories {
     mavenLocal()
