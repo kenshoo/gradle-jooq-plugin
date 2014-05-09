@@ -21,7 +21,8 @@ import javax.sql.DataSource;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
-import com.googlecode.flyway.core.Flyway;
+import org.flywaydb.core.Flyway;
+
 import org.h2.jdbcx.JdbcDataSource;
 
 /**

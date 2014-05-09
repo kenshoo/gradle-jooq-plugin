@@ -82,5 +82,5 @@ modifyPom {
 }
 
 task wrapper(type: Wrapper, description: 'Generates the gradle wrapper.') {
-  gradleVersion = '1.6'
+  gradleVersion = '1.11'
 }
