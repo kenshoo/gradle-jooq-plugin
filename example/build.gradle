@@ -63,6 +63,7 @@ jooq {
     }
     target {
       packageName 'example.generated'
+      directory "${buildDir}/generated-sources/jooq"
     }
   }
 }
