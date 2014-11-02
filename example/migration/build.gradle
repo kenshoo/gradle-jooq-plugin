@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'flyway'
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath 'com.h2database:h2:1.3.170'
+    classpath 'org.flywaydb:flyway-gradle-plugin:3.0'
+  }
+}
+
+flyway {
+      url = "jdbc:h2:${projectDir.parent}/${buildDir.name}/db/flyway"
+      schemas = [ 'example' ]
+      user = 'su'
+}
+
+flywayMigrate.dependsOn("compileJava")

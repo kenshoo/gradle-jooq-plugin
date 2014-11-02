@@ -5,3 +5,7 @@ test-output
 .settings
 .project
 .gradle
+
+*.iml
+*.ipr
+*.iws
